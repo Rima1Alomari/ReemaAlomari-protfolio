@@ -9,6 +9,8 @@ packages = [{include = "repl_nix_reemaalomari_protfolio"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
+consultor = "^0.2.0"
+sqlalchemy = "^2.0.28"
 
 
 [build-system]
