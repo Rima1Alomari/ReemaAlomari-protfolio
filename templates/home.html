@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <body>
+    
+    <title> {{myname}} Space </title>
+    {% include 'bootstrap.html' %}
   </head>
-    <title> ReemaAlomari Project </title>
-    <style>
-      h1{
-        font-size:40px;
-        font-family:Roboto;
-        font-weight:normal;
-        coloor:rgb(260,200,200)
-        text-align: center;
-      }
-      #banner{
-        width: 100%;
-        height: 360px;
-        object-fit:cover;
-      }
-      h2{
-        font-family:Roboto;
-        font-size:32px;
-        color:rgb(260,200,200);
-        font-weight:normal;
-        text-align:center;
-      }
-      p{
-        font-family:Roboto;
-      }
-      </style>
- </head>
 <body>
-  <h1> Reema Alomari Space </h1>
-  <img id="banner" src= "static/banner.jpg" height="320">
-  <h2> About me </h2>
-  <p>  Hello, I am Reema Alomari, an accomplished AI practitioner at Aramco Digital, dedicated to using cutting-edge AI technologies to create innovative solutions that drive success for our organization. I prioritize ethical AI practices and strive to stay at the forefront of the evolving AI landscape by exploring new technologies. My goal is to drive value for my organization and advance AI across various industries, shaping the future of technology and innovation. </p>
+  <div class="container">
+  <h1 class="text-center"> {{myname}} Space </h1>
+    {% include 'banner.html' %}
+    <h2 class="text-center"> About me </h2>
+    <p>Hello, I am Reema Alomari, an accomplished AI practitioner at Aramco Digital, dedicated to using cutting-edge AI technologies to create innovative solutions that drive success for our organization. I prioritize ethical AI practices and strive to stay at the forefront of the evolving AI landscape by exploring new technologies. My goal is to drive value for my organization and advance AI across various industries, shaping the future of technology and innovatio</p>
+    
+<h2 class="text-center mt-2 mb-4"> Projects </h2>
+<div>
+  {% for item in myskills %}
+  {% include 'myProjects.html' %}
+    {% endfor %}
+</div>
+<div class="text-center">
+  <a href="/contactme" type="button" class="btn btn-primary">Contact Me</a>
+<p> copy right, {{myname}} </p>
+  </div>
 </body>
 </html>
